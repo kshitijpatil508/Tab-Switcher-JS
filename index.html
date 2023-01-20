@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Switcher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav-bar">
+        <ul>
+          <li class="tab_button active" onclick="activeTab(this,'panel1')">
+            Question 1
+          </li>
+          <li class="tab_button" onclick="activeTab(this,'panel2')">
+            Question 2
+          </li>
+          <li class="tab_button" onclick="activeTab(this,'panel3')">
+            Question 3
+          </li>
+          <li class="tab_button" onclick="activeTab(this,'panel4')">
+            Question 4
+          </li>
+          <li class="tab_button" onclick="activeTab(this,'panel5')">
+            Question 5
+          </li>
+        </ul>
+      </nav>
+
+      <main class="tab_content">
+        <!-- 1st question -->
+        <div class="panel active" id="panel1">
+          <div class="left question">
+            <h1>Year Converter</h1>
+
+            <p>
+              Q1: Y2K problem: Databases written in 1970's used 2-digit fields
+              to represent the year e.g., 77, 80 instead of 1977, 1980.However
+              with the year 2000 nearby all these fields had to be changed to be
+              4-digit date. Write a program to change a given 2-digit year to a
+              4-digit year. Remember that if the 2-digit number is less than 35
+              it means it’s a year in the 2000-year range. E.g., 15 would mean
+              2015 not 1915.
+            </p>
+          </div>
+          <div class="right">
+            <div class="right-top">
+              <h2>User Input</h2>
+              <div class="user_input_section">
+                <div class="user_input">
+                  <div>
+                    <label>Enter the Year: </label> <br />
+                    <input type="text" id="year" class="inputSection" />
+                  </div>
+                </div>
+                <button onclick="firstQuestion()" class="buttonWP">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div class="answer_section">
+              <h2>Output</h2>
+              <p>Converted Year:</p>
+              <p id="answer1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2nd question -->
+        <div class="panel" id="panel2">
+          <div class="left question">
+            <h1>Bonus!!!</h1>
+
+            <p style="font-size: 15px">
+              Q2: In a board game, a piece may advance 1-6 tiles forward
+              depending on the number rolled on a six-sided dice. If you advance
+              your piece onto the same tile as another player's piece, both of
+              you earn a bonus. Can you reach your friend's tile number in the
+              next roll? Create a function that takes your position a and your
+              friend's position b and returns a boolean representation of
+              whether it's possible to earn a bonus on any dice roll.
+              <br />
+              Examples possibleBonus(3, 7) true possibleBonus(1, 9) false
+              possibleBonus(5, 3) false
+              <br />
+              Note: - You cannot move backward (which is why example #3 doesn't
+              work). If you are already on the same tile, return false, as you
+              would be advancing away. Expect only positive integer inputs.
+            </p>
+          </div>
+          <div class="right">
+            <div class="right-top">
+              <h2>User Input</h2>
+              <div class="user_input_section">
+                <div class="user_input">
+                  <div>
+                    <label>Enter Your Position: </label>
+                    <input type="text" id="yourPosition" class="txtWP" />
+                  </div>
+                  <div>
+                    <label>Enter Friend's Position: </label>
+                    <input type="text" id="friendsPosition" class="txtWP" />
+                  </div>
+                </div>
+                <button onclick="secondQuestion()" class="buttonWP">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div class="answer_section">
+              <h2>Output</h2>
+              <p>Do you have chance of Bonus???</p>
+              <p id="answer2"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3rd question -->
+        <div class="panel" id="panel3">
+          <div class="left question">
+            <h1>Multiple Upto Nth</h1>
+
+            <p>
+              Q3: Create a function that takes two numbers as arguments (num,
+              length) <br />and returns an array of multiples of num until the
+              array length reaches length. <br /><br />Example: -
+              arrayOfMultiples(12, 10) = [12, 24, 36, 48, 60, 72, 84, 96, 108,
+              120] <br /><br />Notes: -Notice that num is also included in the
+              returned array.
+            </p>
+          </div>
+          <div class="right">
+            <div class="right-top">
+              <h2>User Input</h2>
+              <div class="user_input_section">
+                <div class="user_input">
+                  <div>
+                    <label>Enter the Number: </label>
+                    <input type="text" id="txtFirstNumber" class="txtWP" />
+                  </div>
+                  <div>
+                    <label>Enter the Nth Term: </label>
+                    <input type="text" id="txtSecondNumber" class="txtWP" />
+                  </div>
+                </div>
+                <button onclick="thirdQuestion()" class="buttonWP">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div class="answer_section">
+              <h2>Output</h2>
+              <p>Display the Multiples</p>
+              <p id="answer3"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4th question -->
+        <div class="panel" id="panel4">
+          <div class="left question">
+            <h1>Array Depth</h1>
+
+            <p>
+              Q4. Given an array, write a function to calculate its depth.
+              Assume that a normal array has a depth of 1.
+              <br />
+              Examples depth ([1, 2, 3, 4]) 1 depth ([1, [2, [3, 4]]]) 3
+            </p>
+          </div>
+          <div class="right">
+            <div class="right-top">
+              <h2>User Input</h2>
+              <div class="user_input_section">
+                <div class="user_input">
+                  <div>
+                    <label>Enter the Array in Proper format: </label>
+                    <input type="text" id="arrayDepth" class="txtWP" />
+                  </div>
+                </div>
+                <button onclick="fourthQuestion()" class="buttonWP">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div class="answer_section">
+              <h2>Output</h2>
+              <p>Depth of the Array is:</p>
+              <p id="answer4"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5th question -->
+        <div class="panel" id="panel5">
+          <div class="left question">
+            <h1>Nearest Vowel</h1>
+
+            <p>
+              Q5. Given a letter, created a function which returns the nearest
+              vowel to the letter. If two vowels are equidistant to the given
+              letter, return the earlier vowel.
+              <br />
+              Examples: - nearestVowel("b") "a" nearestVowel("s") "u"
+              nearestVowel("i") "i"
+              <br />
+              Notes: - All letters will be given in lowercase. There will be no
+              alphabet wrapping involved, meaning the closest vowel to "z"
+              should return "u", not "a".
+            </p>
+          </div>
+          <div class="right">
+            <div class="right-top">
+              <h2>User Input</h2>
+              <div class="user_input_section">
+                <div class="user_input">
+                  <div>
+                    <label>Enter the aplhabet Character: </label><br />
+                    <input type="text" id="nearestVowel" class="txtWP" />
+                  </div>
+                </div>
+                <button onclick="fifthQuestion()" class="buttonWP">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div class="answer_section">
+              <h2>Output</h2>
+              <p>Nearest vowel is:</p>
+              <p id="answer5"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6th question -->
+        <!-- <div class="panel" id="panel6">
+          <div class="left question">
+            <h1>Longest Sub-Sequence</h1>
+            <p>
+              Q6. Given an array of positive integers. Find the length of the
+              longest sub-sequence such that elements in the subsequence are
+              consecutive integers, the consecutive numbers can be in any order.
+              <br />
+              Input: N = 7 a[] = {2,6,1,9,4,5,3}
+              <br />
+              Output: 6
+              <br />
+              Explanation:The consecutive numbers here are 1, 2, 3, 4, 5, 6.
+              These 6 numbers form the longest consecutive subsquence.
+            </p>
+          </div>
+          <div class="right">
+            <div class="right-top">
+              <h2>User Input</h2>
+              <div class="user_input_section">
+                <div class="user_input">
+                  <div>
+                    <label>Length of Sequence: </label>
+                    <input type="text" id="sequenceLength" class="txtWP" />
+                  </div>
+                  <div>
+                    <label>Enter the Sequence: </label>
+                    <input type="text" id="sequence" class="txtWP" />
+                  </div>
+                </div>
+                <button onclick="sixthQuestion()" class="buttonWP">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div class="answer_section">
+              <h2>Output</h2>
+              <p>The longest Sub-Sequence is:</p>
+              <p id="answer6"></p>
+            </div>
+          </div>
+        </div> -->
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
