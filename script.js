@@ -134,7 +134,7 @@ function fifthQuestion() {
   var vowels = [0, 4, 8, 14, 20];
   var min = 26,
     nearestVowel;
-  if (char.length > 1) {
+  if (char.length > 1 || alphabets.indexOf(char) == -1) {
     alert("Enter only one letter/alphabet");
   } else {
     for (i = 0; i < vowels.length; i++) {
